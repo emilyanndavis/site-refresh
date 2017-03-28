@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Julius+Sans+One|Mallanna|Orbitron:400,500,700|Ubuntu:300,400,500');
+@import '../colors.scss';
+
+.bg {
+    // background-image: url('../assets/landscapes/stormy-desert.jpg');
+    // background-image: url('../assets/landscapes/seaweed-cactus.jpg');
+    // background-image: url('../assets/landscapes/barrel-cactus-closeup.jpg');
+    // background-image: url('../assets/landscapes/desert-monoliths-closer.jpg');
+    // background-repeat: repeat-x;
+    // background-size: contain;
+    position: fixed;
+    bottom: -1vh;
+    left: 0;
+    height: 40vh;
+    width: 300vw;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    animation-name: carousel;
+    animation-iteration-count: infinite;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+}
+
+@keyframes carousel {
+    from { left: 0; }
+    to { left: -100vw; }
+}
+
+.bg-image {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: -1px;
+    padding: 0;
+    height: 100%;
+    &.flipped {
+        transform: scaleX(-1);
+    }
+}
+
+.overlay {
+    background: $charcoal-navy;
+    position: fixed;
+    top: 0;
+    height: 67vh;
+    width: 100vw;
+}
+
+.content {
+    position: fixed;
+    top: 25%;
+    width: 100%;
+}
+
+.message {
+    width: 60%;
+    margin-left: 20%;
+    height: 8vh;
+}
+
+.about {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+span.descriptor-container {
+    display: block;
+    &:first-of-type {
+        margin-bottom: 1vh;
+    }
+}
+
+.descriptor-link {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+span.location {
+    display: block;
+    margin-top: 2%;
+}
+
+.icons {
+    width: 40%;
+    margin-left: 30%;
+    span.icon-container {
+        display: inline-block;
+        width: calc((100% - 16%) / 3);
+        margin-right: 8%;
+        text-align: center;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    span:before {
+        font-family: 'fontawesome';
+    }
+    span.twitter:before {
+        content: '\f099';
+    }
+    span.linkedin:before {
+        content: '\f0e1';
+    }
+    span.github:before {
+        content: '\f09b';
+    }
+}
+
+.icons, .about {
+    a, a:link, a:active {
+        color: $almost-white;
+        text-decoration: none;
+    }
+    a:hover, a:focus {
+        color:#bc4;
+    }
+}
+
+h1, .icon-link span, .descriptor-link {
+    font-size: 1em;
+}
+
+h1, .location {
+    // font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Orbitron', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    // font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Mallanna', sans-serif;    
+    font-weight: 400;
+    color: $almost-white;
+    text-align: center;
+}
+.message-char {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    animation-name: type-in;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+    &:after {
+        content: '|';
+        color: transparent;
+        font-size: 1.2em;
+        margin-left: -0.1em;
+        margin-right: -0.175em;
+        animation-name: blink;
+        animation-duration: 0.2s;
+        animation-delay: inherit;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+    }
+    &:last-of-type:after {
+        content: '|';
+        font-size: 1.2em;
+        margin-left: -0.1em;
+        animation-name: blink;
+        animation-duration: 1.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes type-in {
+    0% { visibility: hidden; }
+    // 50% { visibility: visible; }
+    100% { visibility: visible; }
+    // 0% { color: transparent; }
+    // 100% { color: inherit; }
+}
+
+@keyframes blink {
+    0% { color: transparent; }
+    50% { color: inherit; }
+    100% { color: transparent; }
+}
+
+
+@media (max-width: 350px) {
+    h1, 
+    .icon-link span {
+        font-size: 1em;
+    }
+    .descriptor-link,
+    .location {
+        font-size: 1em;
+    }
+}
+@media (min-width: 351px) {
+    h1, 
+    .icon-link span {
+        font-size: 2em;
+    }
+    .descriptor-link,
+    .location {
+        font-size: 1.2em;
+    }
+}
+@media (min-width: 701px) {
+    h1, 
+    .icon-link span {
+        font-size: 3em;
+    }
+    .descriptor-link,
+    .location {
+        font-size: 1.5em;
+    }
+}
+@media (min-width: 1201px) {
+    h1, 
+    .icon-link span {
+        font-size: 4em;
+    }
+    .descriptor-link,
+    .location {
+        font-size: 2.5em;
+    }
+}
