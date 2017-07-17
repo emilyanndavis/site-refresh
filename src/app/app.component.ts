@@ -8,6 +8,8 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class AppComponent {
 
+    public showNav: boolean = false;
+
     // @TODO: set image selection based on device width? and/or activated route?
     
     // public image: string = 'cholla';
@@ -33,5 +35,15 @@ export class AppComponent {
     //         this.bgImages.push(this.bgImageUrl);
     //     }
     // }
+
+    public toggleNav(): void {
+        let nav:HTMLElement = document.getElementById('navigation');
+        if (this.showNav) {
+            nav.style['animation-name'] = 'slide-up';
+        } else {        
+            nav.style['animation-name'] = 'slide-down';            
+        }
+        this.showNav = !this.showNav;
+    }
     
 }

@@ -1,3 +1,18 @@
+<button class="hamburger hamburger--spring" type="button"
+        aria-label="Menu" aria-controls="navigation" 
+        [ngClass]="{ 'is-active': showNav }" (click)="toggleNav()">
+    <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+    </span>
+</button>
+<nav id="navigation" class="main-nav" [ngClass]="{ 'visible': showNav }" (click)="toggleNav()">
+    <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+    <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
+    <li><a [routerLink]="['/dev']" [routerLinkActive]="['active']">Web Development</a></li>
+    <li><a [routerLink]="['/translation']" [routerLinkActive]="['active']">Translation</a></li>
+    <li><a [routerLink]="['/resume']" [routerLinkActive]="['active']">Resume</a></li>
+</nav>
+
 <div class="bg">
     <!--<img *ngFor="let image of bgImages, let i = index" [src]="image" alt="cholla cactuses" class="bg-image" [ngClass]="{ 'flipped': i % 2 === 1 }" />-->
     <img [src]="bgImageUrl" alt="wood paneling or maybe cactuses" class="bg-image" />

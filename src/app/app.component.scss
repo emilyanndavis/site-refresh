@@ -1,5 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Julius+Sans+One|Mallanna|Orbitron:400,500,700|Ubuntu:300,400,500');
-@import '../colors.scss';
+@import '../styles/colors.scss';
+
+button.hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    &:hover, &:focus {
+        span.hamburger-inner,
+        span.hamburger-inner:before,
+        span.hamburger-inner:after {
+            background-color: $cholla-green;
+        }
+    }
+    &.is-active {
+        &:hover, &:focus {
+            span.hamburger-inner {
+                background-color: transparent;                
+            }            
+        }
+    }
+}
+
+nav.main-nav {
+    position: fixed;
+    left: 0;
+    padding-left: 3vw;
+    top: calc(-1 * (67vh - 54px));
+    padding-top: 54px;
+    z-index: 1;
+    list-style: none;
+    width: 100%;
+    height: calc(67vh - 54px);
+    background: $charcoal-navy;
+    z-index: 1;
+    list-style: none;
+    animation-iteration-count: 1;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    &.visible {
+        top: 0;
+    }
+    li {
+        margin-bottom: 2vh;
+    }
+    li a {
+        color: $almost-white;
+        text-decoration: none;
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: 400;
+        font-size: 5vh;
+        &.active, 
+        &:hover, 
+        &:focus {
+            color: $cholla-green;
+        }
+    }
+}
+
+@keyframes slide-down {
+    from { top: calc(-1 * (67vh - 54px)); }
+    to { top: 0; }    
+}
+
+@keyframes slide-up {
+    from { top: 0; }    
+    to { top: calc(-1 * (67vh - 54px)); }
+}
 
 .bg {
     position: fixed;
