@@ -1,32 +1,7 @@
-<!--<router-outlet></router-outlet>-->
-
 <div class="bg">
-    <img *ngFor="let image of bgImages, let i = index" [src]="image" alt="cactus and blue sky" class="bg-image" [ngClass]="{ 'flipped': i % 2 === 1 }" />
+    <!--<img *ngFor="let image of bgImages, let i = index" [src]="image" alt="cholla cactuses" class="bg-image" [ngClass]="{ 'flipped': i % 2 === 1 }" />-->
+    <img [src]="bgImageUrl" alt="wood paneling or maybe cactuses" class="bg-image" />
 </div>
 <div class="overlay"></div>
-<div class="content">
-    <h1 class="message">
-        <span class="message-char" *ngFor="let char of message, let i = index" 
-        (animationend)="keepVisible($event)"
-        [ngStyle]="{ 'animation-delay': i * secondsPerChar + 's',
-                     'animation-duration': typingDuration - (i * secondsPerChar) + 's' }">{{ char }}</span>   
-        <!--<span class="message-char" *ngFor="let char of message">{{ char }}</span>   -->
-    </h1>
-    <div class="about">
-        <span class="descriptor-container" *ngFor="let descriptor of descriptors">
-            <a [href]="descriptor.href" class="descriptor-link">
-                {{ descriptor.name }}
-            </a>
-        </span>        
-        <span class="location">
-            {{ location }}
-        </span>
-    </div>
-    <div class="icons">
-        <span class="icon-container" *ngFor="let icon of icons">
-            <a [href]="icon.href" class="icon-link">
-                <span [class]="icon.name"></span>
-            </a>
-        </span>
-    </div>
-</div>
+
+<router-outlet></router-outlet>
