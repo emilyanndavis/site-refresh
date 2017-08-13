@@ -6,7 +6,7 @@
     </span>
 </button>
 <nav id="navigation" class="main-nav" [ngClass]="{ 'visible': showNav }" (click)="toggleNav()">
-    <li><a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a></li>
+    <li><a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
     <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
     <li><a [routerLink]="['/dev']" [routerLinkActive]="['active']">Web Development</a></li>
     <li><a [routerLink]="['/translation']" [routerLinkActive]="['active']">Translation</a></li>

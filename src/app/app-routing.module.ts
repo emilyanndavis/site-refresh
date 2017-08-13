@@ -10,11 +10,7 @@ import { ResumeComponent } from './resume/resume.component';
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
-    },
-    {
-        path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
     },
     {
         path: 'about',
