@@ -6,11 +6,31 @@
     </span>
 </button>
 <nav id="navigation" class="main-nav" [ngClass]="{ 'visible': showNav }" (click)="toggleNav()">
-    <li><a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-    <li><a [routerLink]="['/about']" [routerLinkActive]="['active']">About</a></li>
-    <li><a [routerLink]="['/dev']" [routerLinkActive]="['active']">Web Development</a></li>
-    <li><a [routerLink]="['/translation']" [routerLinkActive]="['active']">Translation</a></li>
-    <li><a [routerLink]="['/resume']" [routerLinkActive]="['active']">Resume</a></li>
+    <li>
+        <a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <span>Home</span>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="['/about']" [routerLinkActive]="['active']">
+            <span>About</span>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="['/dev']" [routerLinkActive]="['active']">
+            <span>Web Development</span>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="['/translation']" [routerLinkActive]="['active']">
+            <span>Translation</span>
+        </a>
+    </li>
+    <li>
+        <a [routerLink]="['/resume']" [routerLinkActive]="['active']">
+            <span>Resume</span>
+        </a>
+    </li>
 </nav>
 
 <div class="bg">

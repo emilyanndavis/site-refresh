@@ -45,6 +45,7 @@ nav.main-nav {
         margin-bottom: 2vh;
     }
     li a {
+        display: block;
         color: $almost-white;
         text-decoration: none;
         font-family: 'Julius Sans One', sans-serif;
@@ -54,6 +55,14 @@ nav.main-nav {
         &:hover, 
         &:focus {
             color: $cholla-green;
+        }
+        span {
+            padding: 1vh 2vh;
+        }
+        &:hover, &:focus {
+            span {
+                outline: 1px solid $cholla-green;
+            }
         }
     }
 }
