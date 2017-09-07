@@ -1,3 +1,20 @@
 <section class="page-content">
-    <h1>Translation content coming soon!</h1>
+    <div class="page-section">
+        <h1>Publications</h1>
+        <div class="publication" *ngFor="let publication of publications">
+            <div *ngFor="let piece of publication.pieces">
+                <h2>
+                    <span *ngIf="piece.excerpt">Excerpt from</span>
+                    <span [class.book-title]="piece.excerpt">{{ piece.title }}</span>
+                </h2>
+                <h3>by {{ piece.author }}</h3>
+            </div>
+            <h3 *ngIf="publication.collection">in 
+                <span class="collection-name">{{ publication.collection }}</span>
+            </h3>
+            <h3>{{ publication.publisher }}</h3>
+            <a href="{{ publication.linkHref }}">{{ publication.linkText }}</a>
+        </div>
+    </div>
 </section>
+    
