@@ -1,5 +1,7 @@
-<section class="page-content">
-    <div class="page-section">
+<div class="overlay"></div>
+
+<div class="page">
+    <section class="page-content">
         <h1>Publications</h1>
         <div class="publication" *ngFor="let publication of publications">
             <div *ngFor="let piece of publication.pieces">
@@ -15,6 +17,6 @@
             <h3>{{ publication.publisher }}</h3>
             <a href="{{ publication.linkHref }}">{{ publication.linkText }}</a>
         </div>
-    </div>
-</section>
+    </section>
+</div>
     

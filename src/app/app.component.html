@@ -33,10 +33,8 @@
     </li>
 </nav>
 
-<div class="bg">
-    <!--<img *ngFor="let image of bgImages, let i = index" [src]="image" alt="cholla cactuses" class="bg-image" [ngClass]="{ 'flipped': i % 2 === 1 }" />-->
-    <img [src]="bgImageUrl" alt="wood paneling or maybe cactuses" class="bg-image" />
+<div class="bg tall">
+    <img [src]="bgImageUrl" [alt]="bgImageAltTag" class="bg-image single" />
 </div>
-<div class="overlay"></div>
 
 <router-outlet></router-outlet>

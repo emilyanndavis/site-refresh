@@ -26,12 +26,14 @@ nav.main-nav {
     position: fixed;
     left: 0;
     padding-left: 3vw;
-    top: calc(-1 * (67vh - 54px));
+    // top: calc(-1 * (67vh - 54px));
+    top: calc(-1 * (100vh - 54px));
     padding-top: 54px;
     z-index: 1;
     list-style: none;
     width: 100%;
-    height: calc(67vh - 54px);
+    // height: calc(67vh - 54px);
+    height: calc(100vh - 54px);
     background: $charcoal-navy;
     z-index: 1;
     list-style: none;
@@ -68,55 +70,57 @@ nav.main-nav {
 }
 
 @keyframes slide-down {
-    from { top: calc(-1 * (67vh - 54px)); }
+    // from { top: calc(-1 * (67vh - 54px)); }
+    from { top: calc(-1 * (100vh - 54px)); }
     to { top: 0; }    
 }
 
 @keyframes slide-up {
     from { top: 0; }    
-    to { top: calc(-1 * (67vh - 54px)); }
+    // to { top: calc(-1 * (67vh - 54px)); }
+    to { top: calc(-1 * (100vh - 54px)); }
 }
 
-.bg {
-    position: fixed;
-    bottom: -1vh;
-    left: -25vw;
-    // height: 40vh;
-    // height: 100vh;
-    min-height: 34vh;
-    width: 125vw;
-    transform: translate3d(0,0,0);
-    backface-visibility: hidden;
-    animation-name: carousel;
-    animation-direction: alternate;
-    animation-iteration-count: 1;
-    animation-duration: 10s;
-    animation-timing-function: ease-in-out;
-}
+// .bg {
+//     position: fixed;
+//     bottom: -1vh;
+//     left: -25vw;
+//     // height: 40vh;
+//     // height: 100vh;
+//     min-height: 34vh;
+//     width: 125vw;
+//     transform: translate3d(0,0,0);
+//     backface-visibility: hidden;
+//     animation-name: carousel;
+//     animation-direction: alternate;
+//     animation-iteration-count: 1;
+//     animation-duration: 10s;
+//     animation-timing-function: ease-in-out;
+// }
 
-@keyframes carousel {
-    from { left: 0; }
-    to { left: -25vw; }
-}
+// @keyframes carousel {
+//     from { left: 0; }
+//     to { left: -25vw; }
+// }
 
-.bg-image {
-    display: inline-block;
-    box-sizing: border-box;
-    // margin: -1px;
-    padding: 0;
-    height: 100%;
-    // &.flipped {
-    //     transform: scaleX(-1);
-    // }
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
+// .bg-image {
+//     display: inline-block;
+//     box-sizing: border-box;
+//     // margin: -1px;
+//     padding: 0;
+//     height: 100%;
+//     // &.flipped {
+//     //     transform: scaleX(-1);
+//     // }
+//     width: 100%;
+//     position: absolute;
+//     bottom: 0;
+// }
 
-.overlay {
-    background: $charcoal-navy;
-    position: fixed;
-    top: 0;
-    height: 67vh;
-    width: 100vw;
-}
+// .overlay {
+//     background: $charcoal-navy;
+//     position: fixed;
+//     top: 0;
+//     height: 67vh;
+//     width: 100vw;
+// }

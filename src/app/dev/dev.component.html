@@ -1,29 +1,36 @@
-<section class="page-content">
-    <div class="page-section">
-        <h1>Projects</h1>
-        <ul>
-            <li>Coming soon!</li>
-        </ul>
-    </div>
-    
-    <div class="page-section">
-        <h1>Languages</h1>
-        <ul>
-            <li *ngFor="let language of languages">{{ language }}</li>
-        </ul>
-    </div>
-    <div class="page-section">
-        <h1>Libraries & Frameworks</h1>
-        <ul>
-            <li *ngFor="let item of libsAndFrameworks">{{ item }}</li>
-        </ul>                
-    </div>
-    <div class="page-section">
-        <h1>Relevant Education</h1>
-        <ul>
-            <li *ngFor="let education of educationList">
-                {{ education.school }}: {{ education.program }}, {{ education.completedDate }}
-            </li>
-        </ul>                            
-    </div>
-</section>
+<!-- <div class="bg">
+    <img *ngFor="let image of bgImages, let i = index" [src]="image" alt="cholla cactuses" class="bg-image" [class.flipped]="i % 2 === 1" />
+</div> -->
+<div class="overlay"></div>
+        
+<div class="page">
+    <section class="page-content">
+        <div class="page-section">
+            <h1>Projects</h1>
+            <ul>
+                <li>Coming soon!</li>
+            </ul>
+        </div>
+        
+        <div class="page-section">
+            <h1>Languages</h1>
+            <ul>
+                <li *ngFor="let language of languages">{{ language }}</li>
+            </ul>
+        </div>
+        <div class="page-section">
+            <h1>Libraries & Frameworks</h1>
+            <ul>
+                <li *ngFor="let item of libsAndFrameworks">{{ item }}</li>
+            </ul>                
+        </div>
+        <div class="page-section">
+            <h1>Relevant Education</h1>
+            <ul>
+                <li *ngFor="let education of educationList">
+                    {{ education.school }}: {{ education.program }}, {{ education.completedDate }}
+                </li>
+            </ul>                            
+        </div>
+    </section>
+</div>

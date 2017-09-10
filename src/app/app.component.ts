@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -9,20 +10,18 @@ import { Observable, Subscription } from 'rxjs';
 export class AppComponent {
 
     public showNav: boolean = false;
-
-    // @TODO: set image selection based on device width? and/or activated route?
     
     // public image: string = 'cholla';
     // public bgImageUrl: string = `../assets/landscapes/${this.image}.jpg`;
     public image: string = 'teal-wood-paneling';
     public bgImageUrl: string = `../assets/patterns/${this.image}.jpg`;
+    public bgImageAltTag: string = 'vertical wood paneling or wainscoting, painted with a teal-colored paint';
     // public bgImages: string[] = [];
-
-    // @TODO: set alt tag based on selected image and allow html template to reference it
 
     // @TODO: set animation duration based on device width? if possible?
 
-    constructor() {
+    constructor( private _activeRoute: ActivatedRoute,
+                 private _router: Router ) {
 
     }
 

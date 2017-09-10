@@ -1,31 +1,41 @@
-<section class="home-content">
-    <h1 class="message">
-        <span class="message-char" *ngFor="let char of message, let i = index" 
-        (animationend)="keepVisible($event)"
-        [ngStyle]="{ 'animation-delay': i * secondsPerChar + 's',
-                        'animation-duration': typingDuration - (i * secondsPerChar) + 's' }">{{ char }}</span>   
-        <!--<span class="message-char" *ngFor="let char of message">{{ char }}</span>   -->
-    </h1>
-    <div class="about">
-        <span class="descriptor-container">
-            <a [routerLink]="['/dev']" class="descriptor-link">
-                Web Developer
-            </a>
-        </span>        
-        <span class="descriptor-container">
-            <a [routerLink]="['/translation']" class="descriptor-link">
-                Translator
-            </a>
-        </span>        
-        <span class="location">
-            {{ location }}
-        </span>
-    </div>
-    <div class="icons">
-        <span class="icon-container" *ngFor="let icon of icons">
-            <a [href]="icon.href" class="icon-link">
-                <span [class]="icon.name"></span>
-            </a>
-        </span>
-    </div>
-</section>
+<div class="overlay short"></div>
+        
+<div class="home-page">
+    <section class="home-content">
+        <!-- <h1 class="message">
+            <span class="message-char" *ngFor="let char of message, let i = index" 
+            (animationend)="keepVisible($event)"
+            [ngStyle]="{ 'animation-delay': i * secondsPerChar + 's',
+            'animation-duration': typingDuration - (i * secondsPerChar) + 's' }">{{ char }}</span>   
+        </h1> -->
+        <h1 class="message">{{ name }}</h1>
+        <div class="about">
+            <span class="descriptor-container">
+                <a [routerLink]="['/dev']" class="descriptor-link">
+                    <span class="message-char" *ngFor="let char of devLink, let i = index" 
+                    (animationend)="keepVisible($event)"
+                    [ngStyle]="{ 'animation-delay': i * secondsPerChar + 's',
+                    'animation-duration': typingDuration - (i * secondsPerChar) + 's' }">{{ char }}</span>   
+                </a>
+            </span>        
+            <span class="descriptor-container">
+                <a [routerLink]="['/translation']" class="descriptor-link">
+                    <span class="message-char" *ngFor="let char of translationLink, let i = index" 
+                    (animationend)="keepVisible($event)"
+                    [ngStyle]="{ 'animation-delay': i * secondsPerChar + 's',
+                    'animation-duration': typingDuration - (i * secondsPerChar) + 's' }">{{ char }}</span>   
+                </a>
+            </span>        
+            <span class="location">
+                {{ location }}
+            </span>
+        </div>
+        <div class="icons">
+            <span class="icon-container" *ngFor="let icon of icons">
+                <a [href]="icon.href" class="icon-link">
+                    <span [class]="icon.name"></span>
+                </a>
+            </span>
+        </div>
+    </section>
+</div>

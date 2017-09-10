@@ -18,15 +18,65 @@ body {
     }
 }
 
-.page-content {
+.bg {
+    position: fixed;
+    bottom: -1vh;
+    left: -25vw;
+    height: 11vh;
+    width: 150vw;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
+    animation-name: carousel;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    &.tall {
+        height: 34vh;
+    }
+}
+
+@keyframes carousel {
+    from { left: 0; }
+    to { left: -25vw; }
+}
+
+.bg-image {
+    display: inline-block;
+    box-sizing: border-box;
+    // margin: -1px;
+    padding: 0;
+    height: 10vh;
+    width: auto;
+    &.flipped {
+        transform: scaleX(-1);
+    }
+    &.single {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;            
+    }
+}
+
+.overlay {
+    background: $charcoal-navy;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    &.short {
+        height: 67vh;
+    }
+}
+
+.page {
     position: relative;
-    margin-top: calc(67vh / 2);
-    transform: translateY(-50%);
-    margin-left: auto;
-    margin-right: auto;
-    width: 90vw;
-    max-width: 600px;
-    height: calc(67vh - 54px);
+    // margin-top: calc(67vh / 2);
+    // transform: translateY(-50%);
+    margin-top: 54px;
+    // height: calc(67vh - 54px);
+    height: calc(100vh - 54px);
     overflow-y: scroll;
     color: $almost-white;
     font-family: 'Josefin Sans', sans-serif;
@@ -47,6 +97,13 @@ body {
             border-bottom: 1px dotted $cholla-green;
         }
     }
+}
+
+.page-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    max-width: 600px;
 }
 
 
