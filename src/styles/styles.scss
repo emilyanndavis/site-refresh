@@ -93,8 +93,9 @@ body {
     a {
         text-decoration: none;
         color: $cholla-green;
+        border-bottom: 1px dotted $cholla-green;
         &:hover, &:focus {
-            border-bottom: 1px dotted $cholla-green;
+            border-bottom-style: solid;
         }
     }
 }

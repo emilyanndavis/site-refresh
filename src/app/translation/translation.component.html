@@ -4,17 +4,17 @@
     <section class="page-content">
         <h1>Publications</h1>
         <div class="publication" *ngFor="let publication of publications">
-            <div *ngFor="let piece of publication.pieces">
-                <h2>
+            <div [class.author-block]="publication.authors.length > 1" *ngFor="let author of publication.authors">
+                <h2 *ngFor="let piece of author.pieces">
                     <span *ngIf="piece.excerpt">Excerpt from</span>
                     <span [class.book-title]="piece.excerpt">{{ piece.title }}</span>
                 </h2>
-                <h3>by {{ piece.author }}</h3>
+                <h3>by {{ author.name }}</h3>
             </div>
             <h3 *ngIf="publication.collection">in 
                 <span class="collection-name">{{ publication.collection }}</span>
             </h3>
-            <h3>{{ publication.publisher }}</h3>
+            <h3 [class.collection-name]="!publication.collection">{{ publication.publisher }}</h3>
             <a href="{{ publication.linkHref }}">{{ publication.linkText }}</a>
         </div>
     </section>
