@@ -19,7 +19,7 @@ export class TranslationComponent implements OnInit {
         let wordsWithoutBorders: Publication = new Publication(
             'Words Without Borders', 
             'https://www.wordswithoutborders.org/article/the-man-who-buried-himself', 
-            'Read More'
+            'Read it Online'
         );
         let unamuno: PublicationAuthor = new PublicationAuthor( 'Miguel de Unamuno' );
         unamuno.pieces = [
@@ -30,7 +30,7 @@ export class TranslationComponent implements OnInit {
         let aThousandForests: Publication = new Publication(
             'Open Letter Books',
             'https://www.openletterbooks.org/collections/books/products/a-thousand-forests-in-one-acorn',
-            'Read More',
+            'Get the Book',
             'A Thousand Forests in One Acorn: An Anthology of Spanish-Language Fiction'
         );
         let chirbes = new PublicationAuthor('Rafael Chirbes');

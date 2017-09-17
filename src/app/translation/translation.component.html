@@ -2,7 +2,7 @@
 
 <div class="page">
     <section class="page-content">
-        <h1>Publications</h1>
+        <h1>Published Translations</h1>
         <div class="publication" *ngFor="let publication of publications">
             <div [class.author-block]="publication.authors.length > 1" *ngFor="let author of publication.authors">
                 <h2 *ngFor="let piece of author.pieces">
