@@ -10,7 +10,7 @@ import { ResumeComponent } from './resume/resume.component';
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,
+        component: HomeComponent
     },
     {
         path: 'about',
@@ -25,9 +25,13 @@ const routes: Routes = [
         component: TranslationComponent
     },
     {
-        path: 'resume',
-        component: ResumeComponent
+        path: '**',
+        redirectTo: ''
     }
+    // {
+    //     path: 'resume',
+    //     component: ResumeComponent
+    // }
 ];
 
 @NgModule({
