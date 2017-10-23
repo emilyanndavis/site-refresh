@@ -1,10 +1,12 @@
-<button class="hamburger hamburger--spring" type="button"
-        aria-label="Menu" aria-controls="navigation" 
-        [ngClass]="{ 'is-active': showNav }" (click)="toggleNav()">
-    <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-    </span>
-</button>
+<header class="main-header">
+    <button class="hamburger hamburger--spring" type="button"
+            aria-label="Menu" aria-controls="navigation" 
+            [ngClass]="{ 'is-active': showNav }" (click)="toggleNav()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+</header>
 <nav id="navigation" class="main-nav" [ngClass]="{ 'visible': showNav }" (click)="toggleNav()">
     <li>
         <a [routerLink]="['']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">

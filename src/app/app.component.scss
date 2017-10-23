@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700|Julius+Sans+One|Mallanna|Orbitron:400,500,700|Ubuntu:300,400,500');
 @import '../styles/colors.scss';
 
+header.main-header {
+    height: 54px;
+    width: 100vw;
+    background: linear-gradient(#3a7a7a, #4a8a8a);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 button.hamburger {
     position: fixed;
     top: 0;
@@ -28,7 +38,7 @@ nav.main-nav {
     padding-left: 3vw;
     // top: calc(-1 * (67vh - 54px));
     top: calc(-1 * (100vh - 54px));
-    padding-top: 54px;
+    padding-top: 78px;
     z-index: 1;
     list-style: none;
     width: 100%;
